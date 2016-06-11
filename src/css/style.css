@@ -1,0 +1,35 @@
+html, body {
+  background-color: #263238 !important; }
+
+.mainCont {
+  background-color: #37474F;
+  color: #78909C;
+  padding: 10px;
+  margin-top: 5%;
+  float: left; }
+
+.player1, .player2 {
+  display: inline-block;
+  text-align: center; }
+
+h3 {
+  text-align: center; }
+
+.goButton {
+  position: relative;
+  width: 30%;
+  height: 30px;
+  display: block;
+  margin: 30px auto;
+  padding: 0;
+  overflow: hidden;
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  background-color: #2ecc71;
+  color: #ecf0f1;
+  transition: background-color .3s; }
+
+.goButton:hover, .goButton:focus {
+  background-color: #27ae60; }
