@@ -6,22 +6,43 @@ var mongo = require('mongodb').MongoClient,
 
 		client.on('connection', function(socket){
 
-			var col = db.collection('messages');
+			var col = db.collection('messages'),
+				sendStatus = function(s) {
+					socket.emit('status',s);
+				};
+
+			//emit all messages
+			col.find().limit(100).sort({_id: 1}).toArray(function(err, res){
+				if(err) throw err;
+
+				socket.emit('output', res);
+
+			});
+
 
 			socket.on('input',function(data){
+
 				var name = data.name,
 					message = data.message,
 					whiteSpacceCheck = /^\s*$/;
 
-					col.insert({name: name, message: message},function(){
-						console.log("inserted");
-					});
+					// col.insert({name: name, message: message},function(){
+					// 	console.log("inserted");
+					// });
 
 				if(whiteSpacceCheck.test(name) || whiteSpacceCheck.test(message)){
-					console.log('invalid');
+					sendStatus('Name and message is required.');
 				}else{
 					col.insert({name: name, message: message},function(){
-						console.log("inserted");
+
+						//emit lastest messages
+						socket.emit('output', [data]);
+
+						//show status
+						sendStatus({
+							message: "Message sent",
+							clear: true
+						});
 					});
 				}
 
