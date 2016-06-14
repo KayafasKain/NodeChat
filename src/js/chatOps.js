@@ -2,11 +2,13 @@
 	var getNode = function(s){
 		return document.querySelector(s);
 	},
+	//include classes
 	messages = getNode('.chat-messages'),
 	status = getNode('.chat-status span'),
 	textarea = getNode('.chat-textarea'),
 	chatName = getNode('.chat-name');
 
+	//connecting
 	try {
 		var socket = io.connect('http://127.0.0.1:8080');
 	} catch(e) {
@@ -25,30 +27,41 @@
 			}, 3000);
 		}
 	}
-
+	//parse smiles
 	//setStatus("T");
 
 	if(socket !== undefined){
 		console.log("all well");
 
 		//listen for output
-		socket.on('output', function(data){
+		socket.on('output', function( data ){
 			if(data.length){
 				//loop resoults
-				for(var x = 0;x < data.length; x = x + 1){
+				for(var x = 0;x < data.length; x = x + 1 ) {
+
 					var message = document.createElement('div');
 					message.setAttribute('class', 'chat-message');
 					message.textContent = data[x].name + ': ' + data[x].message;
 
+					//parsing for media content 
+						//parsing for videos (WIP)
+						//message.innerHTML = parse_video( message.textContent );												
+						//parsing for smiles
+						//parsing for images
+						message.innerHTML = parse_img( parse_comment( message.textContent ) );
+						console.log(message);													
+		
+
+
 					messages.appendChild( message );
-					messages.insertBefore(message, messages.lastChild);
+					messages.insertBefore(message, messages.lastChild );
 				}
 			}
 		});
 
 
 		//status listener
-		socket.on('status', function(data){
+		socket.on('status', function( data ){
 			setStatus(( typeof data === 'object') ? data.message : data );
 
 			if(data.clear === true){
