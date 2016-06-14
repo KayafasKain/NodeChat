@@ -48,7 +48,7 @@
 						//message.innerHTML = parse_video( message.textContent );												
 						//parsing for smiles
 						//parsing for images
-						message.innerHTML = parse_img( parse_comment( message.textContent ) );
+						message.innerHTML = parse_video( parse_img( parse_smile( parse_link( message.textContent ) ) ) );
 						console.log(message);													
 		
 
