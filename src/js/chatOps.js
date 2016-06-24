@@ -75,7 +75,7 @@
 				name = chatName.value;
 
 			//send message
-			if(event.which === 13 && event.shiftKey === false){
+			if(event.which === 13 && event.shiftKey === true){
 				socket.emit('input',{
 					name: name,
 					message: self.value

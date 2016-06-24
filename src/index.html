@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="UTF-8">
+		<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />	
 		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 		<script   src="https://code.jquery.com/jquery-3.0.0.min.js"   integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="   crossorigin="anonymous"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
-
 		<div class="chat">
-			<input class = "chat-name" type="text" name="chat-name" placeholder="enter your name">
+			<header class="chat-header">
+				<input class = "chat-name" type="text" name="chat-name" placeholder="enter your name">
+			</header>
 			<div class="chat-messages"></div>
-			<textarea class = "chat-textarea" placeholder="type your message"></textarea>
-			<div class="chat-status">Status <span>idle</span></div>
+			<textarea class = "chat-textarea" placeholder="shift+enter for send"></textarea>
+			<div class="chat-cellar">
+				<div class="chat-status">Status: <span>idle</span></div>
+			</div>
 		</div>
 		<footer>
 			<script src="http://127.0.0.1:8080/socket.io/socket.io.js"></script>
