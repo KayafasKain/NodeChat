@@ -49,12 +49,14 @@
 						//parsing for smiles
 						//parsing for images
 						message.innerHTML = parse_video( parse_img( parse_smile( parse_link( message.textContent ) ) ) );
-						console.log(message);													
+																			
 		
 
 
 					messages.appendChild( message );
 					messages.insertBefore(message, messages.lastChild );
+				    var scrollinDiv = document.getElementById('chatMessage');        
+			        scrollinDiv.scrollTop = 9999;
 				}
 			}
 		});
@@ -75,7 +77,7 @@
 				name = chatName.value;
 
 			//send message
-			if(event.which === 13 && event.shiftKey === false){
+			if(event.which === 13 && event.shiftKey === true){
 				socket.emit('input',{
 					name: name,
 					message: self.value

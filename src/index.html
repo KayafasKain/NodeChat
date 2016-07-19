@@ -1,16 +1,43 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="UTF-8">
+		<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />	
 		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-		<script   src="https://code.jquery.com/jquery-3.0.0.min.js"   integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="   crossorigin="anonymous"></script>
+		<script
+			  src="https://code.jquery.com/jquery-2.2.4.js"
+			  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+			  crossorigin="anonymous"></script>		
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<link href='https://fonts.googleapis.com/css?family=Merriweather:700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+		
+
+
 	</head>
 	<body>
-
-		<div class="chat">
-			<input class = "chat-name" type="text" name="chat-name" placeholder="enter your name">
-			<div class="chat-messages"></div>
-			<textarea class = "chat-textarea" placeholder="type your message"></textarea>
-			<div class="chat-status">Status <span>idle</span></div>
+		<div class="col-lg-3"></div>
+		<div class="chat col-lg-6 container">
+			<header class="chat-header container">
+				<input id="nameInput" class = "chat-name" type="text" name="chat-name" placeholder="enter your name">
+				<p id="userName"></p>
+			</header>
+			<div id="chatMessage" class="chat-messages container"></div>
+			<textarea class = "chat-textarea container" placeholder="shift+enter for send"></textarea>
+			<div class="chat-cellar container">
+				<div class="chat-status">Status: <span>idle</span></div>
+			</div>
 		</div>
 		<footer>
 			<script src="http://127.0.0.1:8080/socket.io/socket.io.js"></script>
