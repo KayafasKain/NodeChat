@@ -1,32 +1,18 @@
 html, body {
-<<<<<<< HEAD
   background-color: #607D8B !important;
   color: #000000;
   font-size: 18px !important;
   font-family: 'Merriweather', serif !important; }
 
 .chat-messages {
-  padding-bottom: 15px;
   text-align: left;
   padding-left: 20px;
-=======
-  background-color: #607D8B; }
-
-.chat-messages {
-  text-align: left;
-  padding-left: 20px;
-  width: 300px;
->>>>>>> 4d2af8674f6baec63c4c354ba7b52be047e46279
   height: 600px;
   overflow-y: scroll;
   overflow-x: hidden;
   background-color: #8B8EB2; }
 
 .chat {
-<<<<<<< HEAD
-=======
-  max-width: 500px;
->>>>>>> 4d2af8674f6baec63c4c354ba7b52be047e46279
   display: block;
   text-align: center;
   margin-left: 10%;
@@ -51,14 +37,13 @@ html, body {
 
 .chat-name {
   margin-top: 7px;
-<<<<<<< HEAD
   text-align: left;
   color: black; }
 
 .chat-header {
   width: 100%;
   background-color: #3F51B5;
-  height: 40px;
+  height: 50px;
   border-radius: 20px 20px 0px 0px; }
   .chat-header p {
     margin-top: 7px; }
@@ -71,180 +56,3 @@ html, body {
   border-radius: 0px 0px 20px 20px; }
   .chat-cellar .chat-status {
     padding-top: 10px; }
-=======
-  text-align: left; }
-
-.chat-header {
-  width: 100.5%;
-  background-color: #3F51B5;
-  height: 40px;
-  border-radius: 20px 20px 0px 0px; }
-
-.chat-cellar {
-  width: 100.5%;
-  background-color: #3F51B5;
-  height: 40px;
-  border-radius: 0px 0px 20px 20px; }
-  .chat-cellar .chat-status {
-    padding-top: 10px; }
-
-@media screen and (max-device-width: 240px) {
-  .chat-messages {
-    width: 100px;
-    margin: 0; }
-  .pastedImg {
-    width: 100px; }
-  .pastedImg:hover {
-    width: 40%;
-    transition: 1s; }
-  .pastedVideo {
-    width: 150px;
-    height: 100px; }
-  .chat-textarea {
-    resize: none;
-    width: 240px;
-    margin: 0;
-    height: 70px;
-    margin-bottom: -1px; } }
-
-@media screen and (max-device-width: 320px) {
-  .chat-messages {
-    width: 225px;
-    margin: 0; }
-  .pastedImg {
-    width: 100px; }
-  .pastedImg:hover {
-    width: 40%;
-    transition: 1s; }
-  .pastedVideo {
-    width: 150px;
-    height: 100px; }
-  .chat-textarea {
-    resize: none;
-    width: 240px;
-    margin: 0;
-    height: 70px;
-    margin-bottom: -1px; } }
-
-@media screen and (max-device-width: 375px) {
-  .chat-messages {
-    width: 270px;
-    margin: 0; }
-  .pastedImg {
-    width: 100px; }
-  .pastedImg:hover {
-    width: 40%;
-    transition: 1s; }
-  .pastedVideo {
-    width: 150px;
-    height: 100px; }
-  .chat-textarea {
-    resize: none;
-    width: 285px;
-    margin: 0;
-    height: 70px;
-    margin-bottom: -1px; } }
-
-@media screen and (max-device-width: 425px) {
-  .chat-messages {
-    width: 310px;
-    margin: 0; }
-  .pastedImg {
-    width: 100px; }
-  .pastedImg:hover {
-    width: 40%;
-    transition: 1s; }
-  .pastedVideo {
-    width: 150px;
-    height: 100px; }
-  .chat-textarea {
-    resize: none;
-    width: 325px;
-    margin: 0;
-    height: 70px;
-    margin-bottom: -1px; } }
-
-@media screen and (max-device-width: 768px) {
-  .chat {
-    margin-left: 17%; }
-  .chat-messages {
-    width: 483px;
-    margin: 0px; }
-  .pastedImg {
-    width: 100px; }
-  .pastedImg:hover {
-    width: 40%;
-    transition: 1s; }
-  .pastedVideo {
-    width: 150px;
-    height: 100px; }
-  .chat-textarea {
-    resize: none;
-    width: 497px;
-    margin: 0;
-    height: 70px;
-    margin-bottom: -1px; } }
-
-@media screen and (max-device-width: 1024px) {
-  .chat {
-    margin-left: 25%; }
-  .chat-messages {
-    width: 483px;
-    margin: 0px; }
-  .pastedImg {
-    width: 100px; }
-  .pastedImg:hover {
-    width: 40%;
-    transition: 1s; }
-  .pastedVideo {
-    width: 150px;
-    height: 100px; }
-  .chat-textarea {
-    resize: none;
-    width: 497px;
-    margin: 0;
-    height: 70px;
-    margin-bottom: -1px; } }
-
-@media screen and (max-device-width: 1440px) {
-  .chat {
-    margin-left: 30%; }
-  .chat-messages {
-    width: 483px;
-    margin: 0px; }
-  .pastedImg {
-    width: 100px; }
-  .pastedImg:hover {
-    width: 40%;
-    transition: 1s; }
-  .pastedVideo {
-    width: 150px;
-    height: 100px; }
-  .chat-textarea {
-    resize: none;
-    width: 497px;
-    margin: 0;
-    height: 70px;
-    margin-bottom: -1px; } }
-
-@media screen and (max-device-width: 1920px) {
-  .chat {
-    margin-left: 40%; }
-  .chat-messages {
-    width: 483px;
-    margin: 0px; }
-  .pastedImg {
-    width: 100px; }
-  .pastedImg:hover {
-    width: 40%;
-    transition: 1s; }
-  .pastedVideo {
-    width: 150px;
-    height: 100px; }
-  .chat-textarea {
-    resize: none;
-    width: 497px;
-    margin: 0;
-    height: 70px;
-    margin-bottom: -1px; } }
->>>>>>> 4d2af8674f6baec63c4c354ba7b52be047e46279
