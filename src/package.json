@@ -1,0 +1,12 @@
+{
+  "name": "node_chat",
+  "version": "1.0.4",
+  "description": "a simple node chat",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Kayafaskain",
+  "license": "ISC"
+}
